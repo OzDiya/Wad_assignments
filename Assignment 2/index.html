@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Form</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="text-align: center;">Login</h2>
+        <form id="loginForm">
+            <label for="username">*Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">*Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="validateLogin()" >Login</button>
+            <a href="registration.html"> New User ?</a>
+
+        </form>
+        <p id="loginStatus"></p>
+    </div>
+
+    <script >
+
+function validateLogin() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var loginStatus = document.getElementById("loginStatus");
+
+    if (username === "user" && password === "password") {
+       
+        alert("Login Successful!") ;
+        
+      
+    } else {
+       
+       
+        loginStatus.innerHTML = "Invalid username or password. Please try again.";
+    }
+}
+    </script>
+</body>
+</html>
